@@ -198,4 +198,8 @@
 .icon-pinterest:before {
 	content: "\ead0";
 }
+.bold{
+    font-weight: bold;
+    text-align: center;
+}
 
