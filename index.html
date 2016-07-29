@@ -58,14 +58,7 @@
                             <li><a href="index.html">Home</a></li>
                             <li><a href="why-us.html">Why Us?</a></li>
                             <li><a href="our-guarantee.html">Our Guarantee</a></li>
-                            <li class="menu-item-has-children"><a href="#">Gallery</a>
-                                <ul class="sub-menu">
-                                    <li><a href="ho-n-scale.html">HO / N Scale</a></li>
-                                    <li><a href="o-scale-1.html">O Scale 1</a></li>
-                                    <li><a href="o-scale-2.html">O Scale 2</a></li>
-                                    <li><a href="o-scale-3.html">O Scale 3</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="contact.html">Contact Us</a></li>
                         </ul>
                     </div>
@@ -88,23 +81,23 @@
                 <div class="gallery fullscreen-gallery">
                     <figure class="post format-gallery gallery-item horizontal">
                         <header class='gallery-icon'>
-                            <img data-src="imgs/cajon pass canyon.jpg" alt="" />
+                            <img data-src="imgs/background/cajon pass canyon.jpg" alt="" />
                         </header>	
                         <figcaption class='gallery-caption'>
                             <div class="entry-summary">
                                 <h2 class="big no-margin"><strong>Select Model Railroads</strong></h2>
                                 <h2>Finest Model Railroads Money Can Buy!</h2><br />
-<!-- Commented out for now, but if James wants to add some sort of news feed it is ready to go!
-
-<div class="blog-oneline-carousel">
-                                    <h3>Latest</h3>
-                                    <div class="viewport">
-                                        <ul class="overview">
-                                            <li><p>12/08 &nbsp; Our current exhibition in Prague now open <a href="#">Read more</a></p></li>
-                                            <li><p>11/08 &nbsp; We had great success at Carnegie Hall <a href="#">Read more</a></p></li>
-                                        </ul>
-                                    </div>
-                                </div>-->
+                                <!-- Commented out for now, but if James wants to add some sort of news feed it is ready to go!
+                                
+                                <div class="blog-oneline-carousel">
+                                                                    <h3>Latest</h3>
+                                                                    <div class="viewport">
+                                                                        <ul class="overview">
+                                                                            <li><p>12/08 &nbsp; Our current exhibition in Prague now open <a href="#">Read more</a></p></li>
+                                                                            <li><p>11/08 &nbsp; We had great success at Carnegie Hall <a href="#">Read more</a></p></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>-->
                             </div>
                         </figcaption>
                     </figure>
@@ -145,6 +138,61 @@
 
         <!-- include custom script -->
         <script src="js/scripts.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="inc/mb.bgndGallery.js"></script>
+        <script>
+            $.mbBgndGallery.buildGallery({
+                // The selector of the element where the gallery will be inserted
+                containment: "body",
+                // the value in millisecond for the display duration
+                timer: 2000,
+                // the value in millisecond for the transaction duration
+                effTimer: 6000,
+                // The selector of the element where the controls are placed
+                controls: "#controls",
+                // define if the gallery should be displayed black and white (works only for same domain images)
+                grayScale: false,
+                // define if the gallery images should be shuffle before the gallery start
+                shuffle: true,
+                preserveTop: false,
+                preserveWidth: false,
+                // You can use one of the preset effects to define how images will enter and exit from the gallery, or you can define the behavior your own using an Object containing the CSS property for the “enter” step and for the “exit” step.
+                // 'fade', 'slideUp', 'slideDown', 'slideRight', 'slideLeft', 'zoom'
+                effect: "zoom",
+                filter: null,
+                // he path to the raster image, if the gallery has a raster overlay smaller images are better displayed //“inc/raster.png”
+                raster: false,
+                // the path to the thumbnails folder
+                folderPath: false,
+                // define if the gallery should start once initialized
+                autoStart: true,
+                // define if the gallery should be displayed black and white (works only for same domain images)
+                grayScale: false,
+                        // define if the gallery should be navigable via keyboard
+                        activateKeyboard: true,
+                // the id of the DOM element where the thumbnails should be placed
+                placeHolder: "gwrapper",
+                // an array of images
+                images: [
+                    "cajon pass canyon.jpg",
+                    "san diego track level.jpg",
+                    "snowshed 100 percent scratchbuilt 2.jpg"
+                ],
+                //Path to the folder containing the thumbnails and ID of the DOM element that should contains them.
+                // <a href="http://www.jqueryscript.net/tags.php?/Thumbnail/">Thumbnail</a> should have the same name of the corresponding image
+                thumbs: {
+                    folderPath: "imgs/background/",
+                    placeholder: "gwrapper"
+                },
+                // Callbacks:
+                onStart: function () {},
+                onPause: function () {},
+                onPlay: function (opt) {},
+                onChange: function (opt, idx) {},
+                onNext: function (opt) {},
+                onPrev: function (opt) {}
 
+            });
+        </script>
     </body>
 </html>

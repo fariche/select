@@ -556,4 +556,14 @@ _____________________________________ */
 	.blog-oneline-carousel .viewport { width: 100%; }
 	.blog-oneline-carousel ul li { line-height: 1.3; padding-top: 5px; }
 }
+.center{
+    text-align: center;
+}
+
+.lineZero{
+    font-family: Consolas;
+    font-size: 24px;
+    color: black;
+}
+
 
