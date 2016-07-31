@@ -48,7 +48,7 @@ if(get_magic_quotes_gpc()) {
 // Example $address = "joe.doe@yourdomain.com";
 
 //$address = "example@themeforest.net";
-$address = "fariche25@gmail.com";
+$address = "jordan@arichetechnologies.com";
 
 
 // Configuration option.
@@ -56,16 +56,16 @@ $address = "fariche25@gmail.com";
 
 // Example, $e_subject = '$name . ' has contacted you via Your Website.';
 
-$e_subject = 'You\'ve been contacted by ' . $name . '.';
+$e_subject = ' Select Model Railroads - You\'ve been Contacted by ' . $name . '.';
 
 
 // Configuration option.
 // You can change this if you feel that you need to.
 // Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
 
-$e_body = "You have been contacted by $name with regards to:" . PHP_EOL . PHP_EOL;
+$e_body = "You have been contacted by $name. Message:" . PHP_EOL . PHP_EOL;
 $e_content = "\"$comments\"" . PHP_EOL . PHP_EOL;
-$e_reply = "You can contact $name via email, $email or via Home/Cell: $homeCell or Office/Other $officeOther";
+$e_reply = "You can contact $name via ". PHP_EOL."email: $email ". PHP_EOL."Home/Cell: $homeCell". PHP_EOL."Office/Other: $officeOther";
 
 $msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
 
@@ -80,7 +80,7 @@ if(mail($address, $e_subject, $msg, $headers)) {
 	// Email has sent successfully, echo a success page.
 
 	echo "<fieldset>";
-	echo "<div id='success_page'>";
+	echo "<div class='green' id='success_page'>";
 	echo "<h1>Email Sent Successfully.</h1>";
 	echo "<p>Thank you <strong>$name</strong>, your message has been submitted to us.</p>";
 	echo "</div>";
@@ -88,6 +88,6 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 } else {
 
-	echo '<div>An example email not sent!</div>';
+	echo "<div class='red'>Error email not sent! Please check your network and try again.</div>";
 
 }

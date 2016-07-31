@@ -565,5 +565,9 @@ _____________________________________ */
     font-size: 24px;
     color: black;
 }
-
-
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
