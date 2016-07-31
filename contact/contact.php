@@ -12,6 +12,8 @@ if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
 $name     = $_POST['name'];
 $email    = $_POST['email'];
 $comments = $_POST['comments'];
+$homeCell = $_POST['home-cell'];
+$officeOther = $_POST['office-other'];
 $verify   = $_POST['verify'];
 
 if(trim($name) == '') {
@@ -46,7 +48,7 @@ if(get_magic_quotes_gpc()) {
 // Example $address = "joe.doe@yourdomain.com";
 
 //$address = "example@themeforest.net";
-$address = "example@themeforest.net";
+$address = "fariche25@gmail.com";
 
 
 // Configuration option.
@@ -63,7 +65,7 @@ $e_subject = 'You\'ve been contacted by ' . $name . '.';
 
 $e_body = "You have been contacted by $name with regards to:" . PHP_EOL . PHP_EOL;
 $e_content = "\"$comments\"" . PHP_EOL . PHP_EOL;
-$e_reply = "You can contact $name via email, $email or via phone $phone";
+$e_reply = "You can contact $name via email, $email or via Home/Cell: $homeCell or Office/Other $officeOther";
 
 $msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
 

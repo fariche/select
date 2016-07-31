@@ -34,13 +34,11 @@
 
             <div class="wrapper">
 
-                <!-- Logo __-->
                 <h1 id="logo">
-                    <a href="index.html" rel="home" id="logo-svg-animated"> 
-                        <img src="imgs/logo-white.png" alt="logo" />
+                    <a href="index.html" rel="home"> 
+                        <img src="imgs/select-logo-g.png" alt="logo" />
                     </a>
                 </h1>
-
                 <!-- Main menu __-->
                 <nav id="mainmenu" role="navigation">
 
@@ -74,7 +72,7 @@
         <!-- MAIN CONTENT SECTION  _____________________________________________-->
         <section id="content" role="main">
 
-          
+
             <div class="wrapper">
                 <!-- WYSIWYG starts here __-->
 
@@ -83,7 +81,9 @@
                         <h2>Contact Us at Select Model Railroads</h2>
                         <div class="center">
                             <p>You can always reach us at 1-844-TRAINS<a class="lineZero">0</a> (1-844-872-4670)</p>
-                        
+                            <p>OR By Email SelectModelRailroads@gmail.com</p>
+                            <p>OR Fill out the message form below</p>
+
                         </div>
                         <div id="message"></div>
                         <form method="post" action="contact/contact.php" name="contactform" id="contactform">
@@ -97,9 +97,17 @@
                                     <label for="email" accesskey="E"><span class="required">*</span> Email</label>
                                     <input name="email" type="text" id="email" size="30" value="" />
                                 </p>
+                                <p class="form-column">
+                                    <label for="home-cell" accesskey="H"> (Optional) Home/Cell</label>
+                                    <input name="home-cell" type="text" id="home-cell" size="30" value="" />
+                                </p>
+                                <p class="form-column">
+                                    <label for="office-other" accesskey="O"> (Optional) Office/Other</label>
+                                    <input name="office-other" type="text" id="office-other" size="30" value="" />
+                                </p>
 
                                 <p>
-                                    <label for="comments" accesskey="C"><span class="required">*</span> Your comments</label>
+                                    <label for="comments" accesskey="C"><span class="required">*</span> Message</label>
                                     <textarea name="comments" cols="40" rows="3" id="comments"></textarea>
                                 </p>
 
