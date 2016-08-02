@@ -12,8 +12,8 @@ if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
 $name     = $_POST['name'];
 $email    = $_POST['email'];
 $comments = $_POST['comments'];
-$homeCell = $_POST['home-cell'];
-$officeOther = $_POST['office-other'];
+$homeCell = $_POST['homeCell'];
+$officeOther = $_POST['officeOther'];
 $verify   = $_POST['verify'];
 
 if(trim($name) == '') {
@@ -48,7 +48,7 @@ if(get_magic_quotes_gpc()) {
 // Example $address = "joe.doe@yourdomain.com";
 
 //$address = "example@themeforest.net";
-$address = "jordan@arichetechnologies.com";
+$address = "selectmodelrailroads@gmail.com";
 
 
 // Configuration option.
@@ -63,9 +63,9 @@ $e_subject = ' Select Model Railroads - You\'ve been Contacted by ' . $name . '.
 // You can change this if you feel that you need to.
 // Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
 
-$e_body = "You have been contacted by $name. Message:" . PHP_EOL . PHP_EOL;
+$e_body = "You have been contacted by $name, Message Below:" . PHP_EOL . PHP_EOL;
 $e_content = "\"$comments\"" . PHP_EOL . PHP_EOL;
-$e_reply = "You can contact $name via ". PHP_EOL."email: $email ". PHP_EOL."Home/Cell: $homeCell". PHP_EOL."Office/Other: $officeOther";
+$e_reply = "You can contact $name via ". PHP_EOL."Email: $email ". PHP_EOL."Home/Cell: $homeCell ". PHP_EOL."Office/Other: $officeOther ";
 
 $msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
 
