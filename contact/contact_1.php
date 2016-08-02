@@ -1,5 +1,4 @@
 <?php
-require_once('class.phpmailer.php');
 
 if(!$_POST) exit;
 
@@ -43,8 +42,13 @@ if(get_magic_quotes_gpc()) {
 	$comments = stripslashes($comments);
 }
 
+
+// Configuration option.
+// Enter the email address that you want to emails to be sent to.
+// Example $address = "joe.doe@yourdomain.com";
+
 //$address = "example@themeforest.net";
-$address = "fariche25@gmail.com";
+$address = "selectmodelrailroads@gmail.com";
 
 
 // Configuration option.
@@ -71,24 +75,9 @@ $headers .= "MIME-Version: 1.0" . PHP_EOL;
 $headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
 $headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 
+if(mail($address, $e_subject, $msg, $headers)) {
 
-$mail = new PHPMailer(); // create a new object
-$mail->IsSMTP(); // enable SMTP
-$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
-$mail->SMTPAuth = true; // authentication enabled
-$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
-$mail->Host = "smtp.gmail.com";
-$mail->Port = 465; // or 587
-$mail->IsHTML(true);
-$mail->Username = "AffordableModelRailroads@gmail.com";
-$mail->Password = "aaaa1331";
-$mail->SetFrom($email);
-$mail->Subject = $e_subject;
-$mail->Body = $msg;
-$mail->AddAddress($address);
-
- if($mail->Send()) {
-  // Email has sent successfully, echo a success page.
+	// Email has sent successfully, echo a success page.
 
 	echo "<fieldset>";
 	echo "<div class='green' id='success_page'>";
@@ -101,4 +90,4 @@ $mail->AddAddress($address);
 
 	echo "<div class='red'>Error email not sent! Please check your network and try again.</div>";
 
- }
+}
