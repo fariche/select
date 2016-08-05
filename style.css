@@ -571,3 +571,10 @@ _____________________________________ */
 .red{
     color: red;
 }
+.pictureLabel{
+    text-align: center;
+    background-color: #F7F7F7;   
+}
+.black{
+    color: black;
+}
